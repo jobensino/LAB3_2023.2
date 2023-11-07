@@ -1,4 +1,4 @@
-import localforage from "localforage";
+import localForage from "localforage";
 
 class DataStub {
 
@@ -11,11 +11,11 @@ class DataStub {
         this._storename = "";
 
         if (storename) {
-            this._store = localforage.createInstance({name: name,storeName:storename});
+            this._store = localForage.createInstance({name: name,storeName:storename});
             this._storename = storename;
         }
         else {
-            this._store = localforage.createInstance({name: name})
+            this._store = localForage.createInstance({name: name})
         }
 
     }

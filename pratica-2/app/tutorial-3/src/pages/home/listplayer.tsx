@@ -1,4 +1,4 @@
-import { useDataService } from "db/useDataService";
+import { useDataService } from "libdb";
 import { PlayerScoreAttr } from "model/player.model";
 import { useState, useEffect } from "react";
 import { useGlobalContext } from "state/global.context";

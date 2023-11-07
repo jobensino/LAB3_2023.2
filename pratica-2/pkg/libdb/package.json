@@ -1,0 +1,42 @@
+{
+  "name": "libdb",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c --bundleConfigAsCjs"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@rollup/plugin-commonjs": "latest",
+    "@rollup/plugin-node-resolve": "latest",
+    "@rollup/plugin-typescript": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "babel-loader": "latest",
+    "rollup": "latest",
+    "rollup-plugin-dts": "latest",
+    "rollup-plugin-peer-deps-external": "latest",
+    "rollup-plugin-terser": "latest",
+    "tslib": "latest",
+    "typescript": "latest"
+  },
+  "peerDependencies": {
+    "react": "latest",
+    "react-dom": "latest",
+    "styled-components": "latest"  
+  },
+  "files": [
+    "dist/**"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/libdb.es.js",
+      "require": "./dist/libdb.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/libdb.umd.js",
+  "module": "./dist/libdb.es.js",
+  "types": "./dist/index.d.ts"
+}

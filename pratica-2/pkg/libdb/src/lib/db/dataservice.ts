@@ -12,7 +12,7 @@ class DataRadixService<D> {
 
     load = async () => {
 
-        let items:D[]=[];
+        const items:D[]=[];
     
         try {
             await this.supplier.store.iterate((value: D) => {

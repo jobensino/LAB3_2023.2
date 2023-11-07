@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import {Modal, ModalReply, TDialogProps, TextEdit} from 'libjr';
 import { useGlobalContext } from 'state/global.context';
 import { PlayerScoreAttr } from 'model/player.model';
-import { useDataService } from 'db/useDataService';
+import { useDataService } from 'libdb';
 import { Box, Container } from './dlgnew.styles';
 
 const Dlg: React.FC<TDialogProps> = ({open,toggle}) => {

@@ -1,5 +1,5 @@
-import { DataRadix } from "db/dataradix";
-import { DataRadixService } from "db/dataservice";
+import { DataRadix } from "../db/dataradix";
+import { DataRadixService } from "../db/dataservice";
 import { useState } from "react";
 
 function useDataService<D> (nameDB:string,nameService:string) {

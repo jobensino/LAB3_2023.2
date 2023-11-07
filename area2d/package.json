@@ -1,0 +1,16 @@
+{
+  "name": "typescript1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev":"tsc && node ./build/exemplo"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.6.4",
+    "typescript": "^5.2.2"
+  }
+}

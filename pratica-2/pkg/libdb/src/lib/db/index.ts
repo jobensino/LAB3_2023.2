@@ -1,3 +1,3 @@
 export * from './dataradix'
 export * from './dataservice'
-export * from './useDataService'
+export * from '../hooks/useDataService'
