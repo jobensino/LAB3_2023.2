@@ -1,0 +1,30 @@
+{
+  "name": "expo-ts",
+  "version": "1.0.0",
+  "main": "./src/App.tsx",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@expo/webpack-config": "latest",
+    "expo": "latest",
+    "expo-status-bar": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-native": "latest",
+    "react-native-web": "latest",
+    "styled-components": "latest"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@types/react": "latest",
+    "@types/react-native": "latest",
+    "@types/styled-components": "latest",
+    "@types/styled-components-react-native": "latest",
+    "typescript": "latest"
+  },
+  "private": true
+}
