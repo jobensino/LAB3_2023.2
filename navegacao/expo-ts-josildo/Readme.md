@@ -149,10 +149,9 @@ export {MainStackNavigator,ContactStackNavigator}
 // conteúdo do arquivo tabnavigator.tsx
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { RootParamList } from './types';
 import { MainStack,ContactStack } from './stacknavigator';
 
-const Tab = createBottomTabNavigator<RootParamList>();
+const Tab = createBottomTabNavigator();
 
 const BottomTabNavigator = () => {
   return (
