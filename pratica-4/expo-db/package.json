@@ -1,0 +1,39 @@
+{
+  "name": "expo-db",
+  "version": "1.0.0",
+  "main": "./index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@expo/webpack-config": "^19.0.0",
+    "@react-navigation/native": "^7.0.0-alpha.6",
+    "@react-navigation/native-stack": "^7.0.0-alpha.7",
+    "expo": "latest",
+    "expo-sqlite": "~11.3.3",
+    "expo-status-bar": "~1.6.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-native": "0.72.6",
+    "react-native-get-random-values": "^1.10.0",
+    "react-native-safe-area-context": "^4.7.4",
+    "react-native-screens": "^3.27.0",
+    "react-native-web": "latest",
+    "reflect-metadata": "latest",
+    "styled-components": "latest",
+    "typeorm": "latest"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-native": "latest",
+    "@types/styled-components": "latest",
+    "@types/styled-components-react-native": "latest",
+    "typescript": "latest"
+  },
+  "private": true
+}
