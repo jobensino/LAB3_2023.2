@@ -158,4 +158,6 @@ As "???" devem ser substituidas pelo nome da entidade que encapsula o gerenciame
 
 1. Como Usar o Sqlite Expo no React Native.[https://medium.com/@thekingoftech/como-configurar-o-sqlite-expo-no-react-native-1d160e04b652]
 2. CRUD React Native com SQLite.[https://github.com/brunoemferreira/CRUDReactNativeSQLite]
-3.  UML - Diagrama de Classes e objetos.[https://www.macoratti.net/net_uml1.htm]
+3. UML - Diagrama de Classes e objetos.[https://www.macoratti.net/net_uml1.htm]
+4. Expo + TypeOrm + SQLite[https://github.com/DeividFrancis/poc-expo-typeorm]
+5. Expo SQLite + TypeORM.[https://dev.to/jgabriel1/expo-sqlite-typeorm-4mn8]
