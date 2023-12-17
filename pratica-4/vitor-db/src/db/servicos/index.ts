@@ -1,0 +1,5 @@
+export *from './criarCliente'
+export *from './verTodosClientes'
+export *from './verCliente'
+export *from './deletarCliente'
+export *from './editarCliente'

@@ -1,0 +1,5 @@
+export *from './criarCliente.estilo'
+export *from './deletarCliente.estilo'
+export *from './verCliente.estilo'
+export *from './editarCliente.estilo'
+export *from './verTodosClientes.estilo'

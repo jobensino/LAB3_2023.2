@@ -1,0 +1,72 @@
+@startuml CSR
+
+interface Entity<<ORM>> {
+    
+}
+
+class ModelBase {
+    id:string
+}
+
+class ModelRepository {
+
+    repo:Repository
+
+    item()
+    items()
+    create()
+    remove()
+    update()
+}
+
+class Repository<<ORM>> {
+
+}
+
+class ModelService {
+
+    repo:ModelRepository
+
+    item()
+    items()
+    create()
+    remove()
+    update()
+   
+}
+
+class ModelController {
+
+    service:ModelService
+
+    item()
+    items()
+    create()
+    remove()
+    update()
+}
+
+class Controller {
+
+    controller:ModelController
+
+    item()
+    items()
+    create()
+    remove()
+    update()
+   
+}
+
+Entity <|-- ModelBase
+
+ModelBase <|-left- ModelRepository
+ModelBase <|-down- ModelService
+ModelBase <|-right- ModelController
+
+ModelRepository -up- Repository
+ModelService -- ModelRepository
+ModelController -- ModelService
+Controller -- ModelController
+
+@enduml
