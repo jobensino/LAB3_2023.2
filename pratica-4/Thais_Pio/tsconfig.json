@@ -1,0 +1,16 @@
+{
+    "extends": "expo/tsconfig.base",
+    "compilerOptions": {
+      "jsx": "react",
+      "strict": true,
+      "allowSyntheticDefaultImports": true,
+      "rootDir": "./",
+      "baseUrl": "./",
+      "paths": {"app/*": ["./src/app/*"],
+                "mvc/*": ["./src/mvc/*"],
+                },
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "strictPropertyInitialization": false,                 
+    }
+  }
