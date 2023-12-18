@@ -13,7 +13,7 @@
     "@react-navigation/native": "^7.0.0-alpha.6",
     "@react-navigation/native-stack": "^7.0.0-alpha.7",
     "expo": "latest",
-    "expo-sqlite": "~11.3.3",
+    "expo-sqlite": "^11.6.0",
     "expo-status-bar": "~1.6.0",
     "react": "latest",
     "react-dom": "latest",
@@ -22,13 +22,13 @@
     "react-native-safe-area-context": "^4.7.4",
     "react-native-screens": "^3.27.0",
     "react-native-web": "latest",
-    "reflect-metadata": "latest",
+    "reflect-metadata": "^0.1.14",
     "styled-components": "latest",
-    "typeorm": "latest"
+    "typeorm": "^0.3.17"
   },
   "devDependencies": {
     "@babel/core": "latest",
-    "@types/node": "latest",
+    "@types/node": "^20.10.4",
     "@types/react": "latest",
     "@types/react-native": "latest",
     "@types/styled-components": "latest",

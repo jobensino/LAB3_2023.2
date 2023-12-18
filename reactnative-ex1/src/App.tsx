@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { registerRootComponent } from 'expo';
 import { Container,Text } from './App.style';
 import { Button } from './cp/button';
+import React from 'react';
 
 function App() {
   return (

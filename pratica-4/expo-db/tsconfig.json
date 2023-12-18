@@ -1,18 +1,17 @@
 {
-    "extends": "expo/tsconfig.base",
-    "compilerOptions": {
-      "strict": true,
-      "allowSyntheticDefaultImports": true,
-      "rootDir": "./",
-      "baseUrl": "./",
-      "paths": {"app/*": ["./src/app/*"],
-                "cp/*": ["./src/cp/*"],
-                "navigation/*": ["src/navigation/*"],
-                "screen/*": ["./src/screen/*"],
-                "state/*": ["./src/state/*"],
-                },
-      "experimentalDecorators": true,
-      "emitDecoratorMetadata": true,
-      "strictPropertyInitialization": false,                 
-    }
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "rootDir": "./",
+    "baseUrl": "./",
+    "paths": {"app/*": ["./src/app/*"],
+              "cp/*": ["./src/cp/*"],
+              "navigation/*": ["src/navigation/*"],
+              "screen/*": ["./src/screen/*"],
+              },
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,                 
   }
+}

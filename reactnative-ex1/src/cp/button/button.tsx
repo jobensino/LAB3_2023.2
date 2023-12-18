@@ -1,3 +1,4 @@
+import React from "react"
 import { ButtonContainer,ButtonText } from "./button.style"
 
 interface ButtonProps {
