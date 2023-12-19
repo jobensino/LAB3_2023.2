@@ -11,16 +11,14 @@ import { LivroController } from 'csr/controllers/LivroController';
 
 const Details: React.FC<DetailsProps> = ({ navigation, route }) => {
 
-  const { state, dispatch } = useLivroContext("Details");
-
-  const _controller = new LivroController(dispatch);
+  const [state, controller]= useLivroContext("Home");
 
   useEffect(() => {
 
     const livroId = route.params?.id as number || null;
 
     if (livroId) {
-      _controller.details(livroId);
+      controller.details(livroId);
     }
   }, []);
 

@@ -12,13 +12,11 @@ export class EntityRepository<T extends ObjectLiteral> {
     }
 
     async create(entity: T) {
-        console.log('Dentro do save Repository')
         const result = await this._dbRepository.save(entity);
-        console.log('result Controller ', result)
 
-        console.log('====================================');
-        console.log('create : ', result);
-        console.log('====================================');
+        // console.log('====================================');
+        // console.log('create : ', result);
+        // console.log('====================================');
 
         return result;
     }
@@ -26,9 +24,9 @@ export class EntityRepository<T extends ObjectLiteral> {
     async update(entity: T) {
         const result = await this._dbRepository.save(entity);
         
-        console.log('====================================');
-        console.log('update : ', result);
-        console.log('====================================');
+        // console.log('====================================');
+        // console.log('update : ', result);
+        // console.log('====================================');
 
         return result;
     }
@@ -36,9 +34,9 @@ export class EntityRepository<T extends ObjectLiteral> {
     async delete(entity: T) {
         const result = await this._dbRepository.remove(entity)
         
-        console.log('====================================');
-        console.log('delete : ', result);
-        console.log('====================================');
+        // console.log('====================================');
+        // console.log('delete : ', result);
+        // console.log('====================================');
 
         return result;
     }
@@ -49,15 +47,16 @@ export class EntityRepository<T extends ObjectLiteral> {
         }
 
         const entity = await this._dbRepository.findOneBy(options as any)
+        
+        // console.log('====================================');
+        // console.log('findById : ', entity);
+        // console.log('====================================');
 
         return entity;
     }
 
     async findAll() {
-        console.log('Dentro do FindAll Repository')
-        console.log('_dbRepository ', this._dbRepository)
         const items = await this._dbRepository.find();
-        console.log('items Repository ', items)
 
         return items;
     }

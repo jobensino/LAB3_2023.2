@@ -7,7 +7,7 @@ const configDataSource : DataSourceOptions = {
     type: 'expo',
     driver: SQLite,
     entities: [Livro],
-    logging: true,
+    // logging: true,
     synchronize: true,
 }
 

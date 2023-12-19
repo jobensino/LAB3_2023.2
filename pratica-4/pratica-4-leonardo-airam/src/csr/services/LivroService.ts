@@ -15,11 +15,8 @@ export class LivroService {
         livro.titulo = item.titulo;
         livro.autor = item.autor;
         livro.genero = item.genero;
-        console.log('item Controller ', item)
 
         const result = await this._repository.create(livro);
-        console.log('Dentro do save Service')
-        console.log('result Controller ', result)
         
         if(result == null) {
             return null;
@@ -65,9 +62,7 @@ export class LivroService {
     }
 
     async findAll() {
-        console.log('Dentro do FindAll Service')
         const livros = await this._repository.findAll();
-        console.log('livros Service ', livros)
         
         return livros;
     }

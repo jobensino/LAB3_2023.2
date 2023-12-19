@@ -14,24 +14,25 @@ import { HomeProps } from './types';
 import { useLivroContext } from 'states/livro/context';
 import { Livro } from 'entities/Livro';
 import { ModalConfirm } from 'cp/modal-confirm';
-import { LivroController } from 'csr/controllers/LivroController';
 
 const Home: React.FC<HomeProps> = ({ navigation, route }) => {
 
-  const {state, dispatch}= useLivroContext("Home");
-
-  const _controller = new LivroController(dispatch);
+  const [state, controller]= useLivroContext("Home");
 
   const [modalVisible, setModalVisible] = useState(false);
 
   const [livroId, setLivroId] = useState<number|null>(null);
 
-  useEffect(() => {  
-    console.log('Entrando no FindAll')
-    _controller.findAll();
-  }, []);
+  useEffect(() => {
+    const unsubscribe = navigation.addListener('focus', () => {
+      controller.findAll();
+    });
 
-  const handleEditar = (id: number) => {
+    return unsubscribe;
+  }, [navigation]);
+
+  const handleEditar = async (id: number) => {
+    await controller.details(id);
     navigation.push('Form', {id: id})
   };
 
@@ -40,12 +41,11 @@ const Home: React.FC<HomeProps> = ({ navigation, route }) => {
   };  
 
   const handleRemover = (livroId: number) => {
-    setLivroId(livroId);
     setModalVisible(true);
   };
 
   const confirmarExclusao = () => {
-    _controller.delete(livroId!);
+    controller.delete(livroId!);
     setModalVisible(false);
     setLivroId(null);
   };

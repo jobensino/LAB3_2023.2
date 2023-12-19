@@ -9,7 +9,7 @@ enum Genero {
     NaoFiccao = 'Não Ficção',
     Biografia = 'Biografia',
     Historia = 'História',
-    Autoajuda = 'Autoajuda',
+    Autoajuda = 'Auto ajuda',
     Poesia = 'Poesia',
     Ciencia = 'Ciência',
     Filosofia = 'Filosofia',

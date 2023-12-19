@@ -7,14 +7,11 @@ import { FormProps } from './types';
 import { Genero } from 'entities/Livro/type';
 import { useLivroContext } from 'states/livro/context';
 import { Picker } from '@react-native-picker/picker';
-import { LivroController } from 'csr/controllers/LivroController';
 
 
 const Form: React.FC<FormProps> = ({ navigation, route }) => {
 
-  const {state, dispatch}= useLivroContext("Form");
-
-  const _controller = new LivroController(dispatch);
+  const [state, controller]= useLivroContext("Form");
 
   const [livroId, setLivroId] = useState<number | undefined>(undefined);
   const [titulo, setTitulo] = useState('');
@@ -22,25 +19,13 @@ const Form: React.FC<FormProps> = ({ navigation, route }) => {
   const [genero, setGenero] = useState<Genero | null>(null);
 
   useEffect(() => {
-
-    const livroId = route.params?.id as number || null;
-
-    if (livroId != null) {
-
-      setLivroId(livroId!);
-
-      navigation.setOptions({title: 'Editar'})
-      
-      _controller.details(livroId);
-
-      if(state.item != null) {
-        setTitulo(state.item.titulo);
-        setAutor(state.item.autor);
-        setGenero(state.item.genero);
-      }
-
+    if(state.item) {
+      setLivroId(state.item.id);
+      setTitulo(state.item.titulo);
+      setAutor(state.item.autor);
+      setGenero(state.item.genero);
     }
-  }, []);
+  },[])
 
   const handleSalvar = () => {
     if (!titulo || !autor || !genero) {
@@ -48,7 +33,7 @@ const Form: React.FC<FormProps> = ({ navigation, route }) => {
       return;
     }
 
-    _controller.save({      
+    controller.save({      
       autor: autor,
       genero: genero,
       titulo: titulo,
@@ -79,6 +64,7 @@ const Form: React.FC<FormProps> = ({ navigation, route }) => {
       <Picker
         selectedValue={genero}
         onValueChange={setGenero}
+        mode='dialog'
       >
         <Picker.Item label="Selecione" value={null} />
         {Object.values(Genero).map((opcao, index) => (

@@ -21,7 +21,7 @@ const screenOptionStyle = {
 const HeaderActions = ({ route, navigation  }: THomeStackParam) => {
   return (
     <TouchableOpacity onPress={() => navigation.push('Form')} style={{ marginRight: 10 }}>
-      <Text>Adicionar</Text>
+      <Text style={{color: 'white'}}>Adicionar</Text>
     </TouchableOpacity>
   );
 }

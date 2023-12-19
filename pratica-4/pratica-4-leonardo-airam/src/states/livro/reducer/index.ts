@@ -14,19 +14,38 @@ const reducer: TFunctionReducer<Livro, TActions<Livro>> = (prevState, action) =>
     switch (action.type) {
 
         case ActionsType.DETAILS:
-            return { ...prevState, item: action.payload.item }
+            return{
+                ...prevState,
+                item: action.payload.item,
+            }
+            break;
 
         case ActionsType.LIST_ALL:
-            return { ...prevState, items: action.payload.items };
+            return {
+                ...initialState,
+                items: action.payload.items,
+            }
+            break;
 
         case ActionsType.ERROR:
-            return { ...prevState, hasError: true, message: action.payload.message };
+            return {
+                ...prevState,
+                hasError: true,
+                message: action.payload.message
+            }
+            break;
 
         case ActionsType.SUCESS:
-            return { ...prevState, hasError: false, message: action.payload.message };
+            return {
+                ...prevState,
+                hasError: false,
+                message: action.payload.message
+            }
+            break;
 
         default:
             return prevState;
+            break;
     }
 }
 
